@@ -60,10 +60,11 @@ class Solution:
             cur_pos=[0,0]
             #direction= ['S':0,'W':1,'N':2,'E':3] Reference for cur_dir (current direction)
             cur_dir=2
-            if instructions[0] == instructions[len(instructions)-1]:
+            if instructions.count("R") == instructions.count("L"):
                 return False
-            else:
-                return True
+            if instructions.count("R") == instructions.count("L"):
+                return False
+            return True
             #TODO: Write code below to returnn a boolean value with the solution to the prompt.
             pass
         
